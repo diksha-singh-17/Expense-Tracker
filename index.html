@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense-Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <h1 class="text-center text-white bg-dark mb-2">Expense-Tracker</h1>
+      <form class="row g-3 mt-4">
+        <div class="col-md-3">
+          <label for="inputAmount" class="form-label">ExpenseAmount :</label>
+          <input type="number" class="form-control" id="inputAmount" />
+        </div>
+        <div class="col-md-3">
+          <label for="inputdesc" class="form-label">ExpenseDescription :</label>
+          <input type="text" class="form-control" id="inputdesc" />
+        </div>
+        <div class="col-md-3">
+          <label for="mySelect" class="form-label">Category :</label>
+          <select id="mySelect" class="form-select">
+            <option disabled selected value>select an option</option>
+            <option value="fuel">Fuel</option>
+            <option value="games">Games</option>
+            <option value="movie">Movie</option>
+            <option value="groceries">Groceries</option>
+            <option value="shopping">Shopping</option>
+          </select>
+        </div>
+        <div class="col-md-3" style="margin-top: 45px">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="handleEvent(event)"
+          >
+            Add Expense
+          </button>
+        </div>
+      </form>
+      <ul id="list" class="mt-4 p-2"></ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
